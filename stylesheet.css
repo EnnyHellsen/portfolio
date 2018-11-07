@@ -169,7 +169,26 @@ body {
   padding-top: 20px;
 }
 
+
+
+
+
 /* chart */
+
+.bar-chart {
+  fill: #7C2C99;
+  margin-left: 10%;
+  margin-top: -50px;
+  text-align: center;
+}
+
+.bar-chart-label {
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
 
 .ct-chart{
   height: 60%;
@@ -188,6 +207,12 @@ line.ct-bar {
 .ct-grid {
   stroke: rgba(0, 0, 0, 0) !important;
 }
+
+
+
+
+
+
 
 .portfolio_item {
   height: 650px;
