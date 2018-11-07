@@ -1,0 +1,373 @@
+body {
+  background-color: black;
+  font-family: 'Josefin Slab', serif;
+  background-image: url("pictures/portfolio_enny2_version2.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+#top_div {
+  height:850px;
+  width: 100%;
+}
+
+#logo {
+  height:130px;
+  margin-left: 40px;
+  margin-top: 40px;
+  position: absolute;
+}
+
+#wrapper_menu {
+  position: fixed;
+  width: 100%;
+}
+
+#menu_icon {
+  height: 30px;
+}
+
+#menu {
+  float:right;
+  text-align: right;
+  color: white;
+  z-index: 1;
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+#menu_dropdown {
+
+  background-color: rgba(255,255,255,0);
+  padding-top: 20px;
+  padding-right: 20px;
+  height: 250px;
+  width: 160px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ab6be7;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#menu_dropdown ul:hover {
+  color: white;
+}
+
+#enny {
+  font-size:200px;
+  font-family: 'Merriweather', serif;
+  margin-top: 27%;
+  padding-left: 11%;
+  z-index: 1;
+  position: absolute;
+  color: white;
+  opacity: 0;
+}
+
+#info_text {
+  width: 370px;
+  height:150px;
+  margin-top: 38%;
+  margin-left: 61%;
+  z-index: 1;
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  opacity: 0;
+  font-family: 'Josefin Slab', serif;
+  letter-spacing: 0.2px;
+}
+
+#down {
+  width: 100%;
+  margin: auto;
+  margin-top: 50%;
+  text-align: center;
+  position: absolute;
+}
+
+#down_button {
+  height:25px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#square1, #square2 {
+  height: 300px;
+  width: 50%;
+}
+#square1 {
+  float: right;
+}
+
+#square2 {
+  float: left;
+}
+
+#square1 p {
+  margin: 6%;
+  margin-top: 20%;
+  font-size: 100px;
+  color: white;
+  float: right;
+  letter-spacing: 10px;
+}
+
+#square_symbols {
+  height: 450px;
+  width: 100%;
+  margin-top: 300px;
+  padding-top: 100px;
+}
+
+#symbol_underline  {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  left: 41%;
+  right: 0;
+  margin-top: -330px;
+}
+
+#square_symbols, #square1 , #square2 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* icons */
+
+.icons {
+  margin-top: -30px;
+  display: inline-block;
+  text-align: center;
+  width: 18%;
+  height:700px;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+
+}
+
+.icons p {
+  display: inline-flex;
+  color: white;
+  font-size: 30px;
+  font-family: 'Josefin Slab', serif;
+}
+
+.icon {
+  width: 70%;
+
+}
+
+#design_description, #strategy_description, #analytics_description, #coding_description {
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  padding-top: 20px;
+}
+
+/* chart */
+
+.ct-chart{
+  height: 60%;
+  margin-top: 11%;
+}
+
+line.ct-bar {
+  stroke: #7C2C99 !important;
+}
+
+
+.ct-label {
+  color: white !important;
+}
+
+.ct-grid {
+  stroke: rgba(0, 0, 0, 0) !important;
+}
+
+.portfolio_item {
+  height: 650px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.portfolio_text_holder h1 {
+  color: white;
+  font-size: 65px;
+  margin-top: 110px;
+}
+
+.portfolio_text_holder h2 {
+  color: white;
+  display: inline-block;
+}
+
+.portfolio_text_holder p {
+  font-size: 15px;
+  font-family: 'Josefin Slab', serif;
+}
+
+.line1 {
+  height: 6px;
+  width: 60px;
+  border-top: 2px solid white;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.line2 {
+  height: 6px;
+  width: 77%;
+  border-top: 2px solid white;
+  display: inline-block;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+.portfolio_text_holder {
+  float: left;
+  width:40%;
+  height: 500px;
+  text-align: left;
+  margin-left: 4%;
+  margin-top: 3%;
+}
+
+.project_picture_holder {
+  float: right;
+  width: 45%;
+  height: 45%;
+  margin-top: 9%;
+  margin-right: 1%;
+  z-index: 1;
+}
+
+.project_picture {
+  width: 120%;
+  z-index: -1;
+}
+
+#curriculum_div {
+  width: 100%;
+  height: 800px;
+  padding-top: 10px;
+  color: white;
+}
+
+#curriculum {
+  float: left;
+  margin-left: 5%;
+}
+
+#curriculum_div h1{
+  font-size: 70px;
+  margin-bottom: 60px;
+}
+
+.timeline {
+  width: 600px;
+  height: 100px;
+  padding-left: 10px;
+  margin-bottom: 25px;
+}
+
+#clients {
+  margin-bottom: 65px;
+}
+
+.timeline h3 {
+  font-size: 20px;
+}
+
+.timeline p {
+  font-size: 14px;
+}
+
+#contact {
+  float: right;
+  margin-right: 5%;
+}
+
+.contact_icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin: 15px;
+}
+
+.contact_icon:hover {
+  filter: invert(100%);
+}
+
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+#footer p {
+  font-size: 20px;
+  color: white;
+}
+
+#up_button {
+  height: 20px;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg);
+}
+
+
+/* Responsive to mobile devices */
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: black;
+    background-image: url("");
+  }
+
+  #top_div {
+    background-image: url("pictures/portfolio_enny2_version2.jpg");
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #enny {
+    font-size:190px;
+    margin-top: 47%;
+    padding-left: 5%;
+  }
+
+  #info_text {
+    margin-top: 60%;
+    margin-left: 65%;
+  }
+
+  #square1 p {
+    font-size: 80px;
+  }
+
+  #down {
+    margin-top: 78%;
+  }
+
+  #menu_dropdown {
+    color: white;
+  }
+
+  .timeline {
+    width: 500px;
+  }
+
+}

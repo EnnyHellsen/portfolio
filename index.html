@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.optimizely.com/js/8410780888.js"></script>
+
+
+			<script>
+				document.onreadystatechange = function () {
+					var state = document.readyState
+					var bodyStyle = document.body.style;
+					if (state == 'interactive') {
+						bodyStyle.visibility = "hidden";
+					} else if (state == 'complete') {
+						setTimeout(function(){
+						bodyStyle.visibility = "visible";
+					},2000);
+					}
+				}
+	 		</script>
+
+
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300" rel="stylesheet">
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+
+		<link rel="icon" type="image/png" href="pictures/favicon3.png">
+		<title> Enny Hellsén Johansson </title>
+
+		<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-84078430-3', 'auto');
+  		ga('send', 'pageview');
+
+		</script>
+
+	</head>
+
+
+	<body>
+
+
+		<div id="top_div">
+
+			<div id="wrapper_menu">
+				<div id="menu">
+					<img id="menu_icon" src="pictures/menu.png">
+						<div id="menu_dropdown">
+							<ul id="list_about_me"> My Skills </ul>
+							<ul id="list_project_1"> Project 1 </ul>
+							<ul id="list_project_2"> Project 2 </ul>
+							<ul id="list_project_3"> Project 3 </ul>
+							<ul id="list_project_4"> Project 4 </ul>
+							<ul id="list_curriculum"> Experience & Contact </ul>
+						</div>
+					</div>
+				</div>
+
+				<img id="logo" src="pictures/portfolio_logo.png">
+
+				<p id="enny"> Enny </p>
+
+				<div id="info_text">
+					<p>
+						Hey there! I have studied 'Digital Data Strategy' at Hyper Island.
+						My passions are coding, design and making the world a better place. I do front end development with a data perspective.
+						I'm currently looking for an internship. Scroll down to get to know me!
+					</p>
+				</div>
+
+
+				<div id="down">
+					<div class="down_shadow">
+						<img id="down_button" src="pictures/button.png">
+					</div>
+				</div>
+			</div>
+
+
+				<div id="square1">
+				<p>My skills</p>
+				</div>
+
+				<div id="square2">
+			  	<div class="ct-chart"></div>
+					<!-- <svg width="300" height="300" font-family="sans-serif" font-size="10" text-anchor="middle"></svg> -->
+				</div>
+
+
+
+				<div id="square_symbols">
+
+					<div class="icons">
+						<p>Coding</p>
+						<img class="icon" id="icon_coding" src="pictures/code_icon.png">
+						<p id="coding_description"> I am a front end developer coding in HTML, CSS, and Javascript using libraries such as jQuery, node.js and D3.js  </p>
+					</div>
+
+					<div class="icons">
+						<p>Strategy</p>
+						<img class="icon" id="icon_strategy" src="pictures/strategy_icon.png">
+						<p id="strategy_description"> I come up with creative strategies based on data to improve design and optimize the performance of a website</p>
+					</div>
+
+					<div class="icons">
+						<p>Design</p>
+						<img class="icon" id="icon_design" src="pictures/design_icons.png">
+						<p id="design_description"> I design everything from websites to graphic illustrations, I'm comfortable handling Photoshop, Illustrator and Sketch</p>
+					</div>
+
+					<div class="icons">
+						<p>Analytics</p>
+						<img class="icon" id="icon_analytics" src="pictures/analytics_icon.png">
+						<p id="analytics_description"> Using analytics tools such as Google Analytics and Hotjar I can look at and interpret datasets and understand important information that needs to be taken into consideration</p>
+					</div>
+
+					<p id="symbol_underline"> -- mouse over the symbols -- </p>
+
+				</div>
+
+
+				<!-- PROJECT 1-->
+				<div class="portfolio_item" id="project_1">
+					<div class="portfolio_text_holder">
+						<div class="line1"> </div>
+							<h2>PROJECT 1</h2><div class="line2"> </div>
+
+						<h1>HANGMAN</h1>
+						<h3> Time Span: 3 Days </h3>
+						<h3> Skills: Javascript</h3>
+						<p> A simple 'guess the word' game I've built using javascript and an API to fetch random words. </p>
+					</div>
+					<div class="project_picture_holder">
+						<a href="http://ennyhellsen.com/hangman" target="_blank">
+							<img class="project_picture" id="hangman" src="pictures/project_hangman.png">
+						</a>
+					</div>
+				</div>
+
+				<!-- PROJECT-->
+				<div class="portfolio_item" id="project_2">
+					<div class="portfolio_text_holder">
+						<div class="line1"> </div>
+							<h2>PROJECT 2</h2><div class="line2"> </div>
+
+						<h1>WEATHER MAP</h1>
+						<h3> Time Span: 2 Weeks </h3>
+						<h3> Skills: D3.js, Javascript and Terminal</h3>
+						<p> Using a topojson file and the D3 library, I built a responsive map from scratch that fetches weather data and visualises it on a map. </p>
+					</div>
+					<div class="project_picture_holder">
+						<a href="http://ennyhellsen.com/weathermap" target="_blank">
+							<img class="project_picture" id="weathermap" src="pictures/project_weathermap.png">
+						</a>
+					</div>
+				</div>
+
+				<!-- PROJECT-->
+				<div class="portfolio_item" id="project_3">
+					<div class="portfolio_text_holder">
+						<div class="line1"> </div>
+							<h2>PROJECT 3</h2><div class="line2"> </div>
+
+						<h1>MILJÖSYMBOLER</h1>
+						<h3> Role: Developer &nbsp; &nbsp; Time Span: 4 Weeks </h3>
+						<h3> Skills: HTML, CSS and SEO</h3>
+						<p>In a team of six persons we created a website focusing on Search Engine Optimization. We built a website that compares environmental symbols in Sweden.
+							As a developer I built the site using HTML and CSS, while implementing important meta tags.  </p>
+					</div>
+					<div class="project_picture_holder">
+						<a href="https://organicgrowth.github.io/group4/" target="_blank">
+							<img class="project_picture" id="miljosymboler" src="pictures/project_miljosymboler.png">
+						</a>
+					</div>
+				</div>
+
+				<!-- PROJECT-->
+				<div class="portfolio_item" id="project_4">
+					<div class="portfolio_text_holder">
+						<div class="line1"> </div>
+							<h2>PROJECT 4</h2><div class="line2"> </div>
+
+						<h1>ADVENTURING</h1>
+						<h3> Role: Developer & Designer &nbsp; &nbsp; Time Span: 3 Weeks </h3>
+						<h3> Tools/Skills: HTML, CSS and Javascript</h3>
+						<p>In a team of four persons, we created a website that fetches an 'adventure' from a json database and give the directions to get there based on the location the user themselves puts in. </p>
+					</div>
+					<div class="project_picture_holder">
+						<a href="https://andreamogren.github.io/adventuretime/" target="_blank">
+							<img class="project_picture" id="adventuring" src="pictures/project_adventuring.png">
+						</a>
+					</div>
+				</div>
+
+
+
+				<div id="curriculum_div">
+					<div id="curriculum">
+						<h1> Experience </h1>
+
+						<div class="timeline" id="clients">
+							<h3> CLIENTS </h3>
+							<p> I have worked on projects with clients like Doctors without Borders, Kalskronas Tourist Office, COTY, Corniche Watches and HD-Sydsvenskan. During the projects I've been doing things like analyzing data, optimizing the web experience and creating effective marketing stategies and campaigns.</p>
+						</div>
+
+						<div class="timeline">
+							<h3> Hyper Island 2016-CURRENT </h3>
+							<p> Digital data strategist student studying at one of the top tech and marketing schools, learning data analysis, programming and a broad understanding of what can be made with the digital media we have today.</p>
+						</div>
+
+						<div class="timeline">
+							<h3> Story Relations 2015-2016</h3>
+							<p> Intern at a PR agency. I was doing tasks like writing press releases, contacting influencers and developing creative PR solutions.</p>
+						</div>
+
+						<div class="timeline">
+							<h3> Graphic Design and Communication 2013-2014 </h3>
+							<p> Graphic Design at Runö Folkhögskola with a focus on printed media. I learned about digital layout design, Illustration and how to communicate graphically.</p>
+						</div>
+
+						<div class="timeline">
+							<h3> Globala Gymnasiet 2010-2013 </h3>
+							<p> Upper secondary school oriented in sustainability, environment and social injustice. I studied social science, art and communication.</p>
+						</div>
+					</div>
+
+					<div id="contact">
+						<h1> Contact </h1>
+
+						<a href="mailto:enny.hellsen.j@hyperisland.se">
+							<img class="contact_icon" src="pictures/email.png">
+						</a>
+						<a href="https://www.linkedin.com/in/enny-hells%C3%A9n-johansson-5a7794128/" target="_blank">
+							<img class="contact_icon" src="pictures/linkedin.png">
+						</a>
+						<a href="https://github.com/EnnyHellsen" target="_blank">
+							<img class="contact_icon" src="pictures/github.png">
+						</a>
+					</div>
+				</div>
+
+				<div id="footer">
+					<img id="up_button" src="pictures/button.png">
+					<p> Scroll to top </p>
+				</div>
+
+
+
+			<script src="my_script.js"></script>
+	</body>
+</html>
