@@ -180,25 +180,83 @@ $('#hangman').mouseleave(function() {
 
 // Chartist graph
 
-new Chartist.Bar('.ct-chart', {
-  labels: ['HTML & CSS', 'jQuery', 'Javascript', 'node.js', 'D3.js', 'Illustrator', 'Sketch', 'Google Analytics', 'Working in Teams'],
-  series: [
-    [90000, 60000, 30000, 20000, 20000, 70000, 20000, 50000, 100000],
-  ]
-}, {
-  stackBars: true,
-  axisY: {
-    labelInterpolationFnc: function(value) {
-      return (value / 1000) + '%';
-    }
-  }
-}).on('draw', function(data) {
-  if(data.type === 'bar') {
-    data.element.attr({
-      style: 'stroke-width: 10%'
+// new Chartist.Bar('.ct-chart', {
+//   labels: ['HTML & CSS', 'jQuery', 'Javascript', 'node.js', 'D3.js', 'Illustrator', 'Sketch', 'Google Analytics', 'Working in Teams'],
+//   series: [
+//     [90000, 60000, 30000, 20000, 20000, 70000, 20000, 50000, 100000],
+//   ]
+// }, {
+//   stackBars: true,
+//   axisY: {
+//     labelInterpolationFnc: function(value) {
+//       return (value / 1000) + '%';
+//     }
+//   }
+// }).on('draw', function(data) {
+//   if(data.type === 'bar') {
+//     data.element.attr({
+//       style: 'stroke-width: 10%'
+//     });
+//   }
+// });
+//
+// });
+
+
+// D3.js
+
+var dataset = [90, 90, 50, 10, 60, 70, 90, 20, 40];
+var textData = ["HTML5", "CSS", "EJS", "Node.js", "Analytics tools", "Illustrator", "Teamwork", "SEO", "Adwords"];
+
+var svgWidth = 700, svgHeight = 300, barPadding = 30;
+var barWidth = (svgWidth / dataset.length);
+
+
+var svg = d3.select('svg')
+    .attr("width", svgWidth)
+    .attr("height", 40 + svgHeight);
+
+var barChart = svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("y", function(d) {
+         return svgHeight - d
+    })
+    .attr("height", function(d) {
+        return d;
+    })
+    .attr("width", barWidth - barPadding)
+    .attr("transform", function (d, i) {
+        var translate = [barWidth * i, 0];
+        return "translate("+ translate +")";
     });
-  }
-});
+
+
+
+		var text = svg.selectAll("text")
+		    .data(textData)
+		    .enter()
+		    .append("text")
+		    .text(function(d) {
+		        return d;
+		    })
+		    .attr("y", svgHeight + 30)
+		    .attr("x", function(d, i) {
+					 var length = textData[i].length * 10;
+					 var bar = barWidth * i;
+					 var hej = bar - length;
+					 console.log(hej);
+					 return bar;
+					// if(textData[i].lenght > 11){
+					// 	return barWidth * i + 20;
+					// } else {
+					// 	return barWidth * i;
+					// }
+		    })
+		    .attr("fill", "white")
+				.attr("class", "bar-chart-label");
+				// .style("text-anchor", "end");
 
 //end of jquery I think
 });
