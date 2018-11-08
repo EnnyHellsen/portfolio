@@ -205,10 +205,10 @@ $('#hangman').mouseleave(function() {
 
 // D3.js
 
-var dataset = [90, 90, 50, 10, 60, 70, 90, 20, 40];
-var textData = ["HTML5", "CSS", "EJS", "Node.js", "Analytics tools", "Illustrator", "Teamwork", "SEO", "Adwords"];
+var dataset = [85, 90, 50, 10, 20, 60, 70, 60, 90, 20, 40];
+var textData = ["HTML5", "CSS", "EJS", "Node.js", "Terminal", "Data analysis", "Design", "Illustrator", "Collaboration", "SEO", "Marketing"];
 
-var svgWidth = 700, svgHeight = 300, barPadding = 30;
+var svgWidth = 700, svgHeight = 190, barPadding = 30;
 var barWidth = (svgWidth / dataset.length);
 
 
@@ -216,24 +216,37 @@ var svg = d3.select('svg')
     .attr("width", svgWidth)
     .attr("height", 40 + svgHeight);
 
+//making the bars adjust to svg height and width
+
+var yScale = d3.scaleLinear()
+    .domain([0, d3.max(dataset)])
+    .range([0, svgHeight]);
+
+//create bars
 var barChart = svg.selectAll("rect")
     .data(dataset)
     .enter()
     .append("rect")
     .attr("y", function(d) {
-         return svgHeight - d
+         return svgHeight - yScale(d)
     })
     .attr("height", function(d) {
-        return d;
+        return yScale(d);
     })
     .attr("width", barWidth - barPadding)
     .attr("transform", function (d, i) {
         var translate = [barWidth * i, 0];
         return "translate("+ translate +")";
-    });
+    })
+		.on('mouseover', function(d){
+			// alert(d);
+		  //   $('#square2').append('<p>' + d + '</p>');
+		});
+		// .on('mouseleave', function(d, i){
+		// 		d3.select(this).attr('fill', 'rgba(124,44,153,1)')
+		// });;
 
-
-
+//append text to the data
 		var text = svg.selectAll("text")
 		    .data(textData)
 		    .enter()
@@ -243,20 +256,13 @@ var barChart = svg.selectAll("rect")
 		    })
 		    .attr("y", svgHeight + 30)
 		    .attr("x", function(d, i) {
-					 var length = textData[i].length * 10;
-					 var bar = barWidth * i;
-					 var hej = bar - length;
-					 console.log(hej);
-					 return bar;
-					// if(textData[i].lenght > 11){
-					// 	return barWidth * i + 20;
-					// } else {
-					// 	return barWidth * i;
-					// }
+					 return barWidth * i;
 		    })
 		    .attr("fill", "white")
 				.attr("class", "bar-chart-label");
-				// .style("text-anchor", "end");
+
+var hover = svg.selectAll('rect')
+						.style("");
 
 //end of jquery I think
 });
