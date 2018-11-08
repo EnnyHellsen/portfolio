@@ -206,7 +206,7 @@ $('#hangman').mouseleave(function() {
 // D3.js
 
 var dataset = [85, 90, 50, 10, 20, 60, 70, 60, 90, 20, 40];
-var textData = ["HTML5", "CSS", "EJS", "Node.js", "Terminal", "Data analysis", "Design", "Illustrator", "Collaboration", "SEO", "Marketing"];
+var textData = ["HTML5", "CSS", "Javascript", "Node.js", "Terminal", "Data analysis", "Design", "Illustrator", "Collaboration", "SEO", "Marketing"];
 
 var svgWidth = 700, svgHeight = 190, barPadding = 30;
 var barWidth = (svgWidth / dataset.length);
